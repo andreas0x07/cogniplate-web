@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.example.cogniplate",
+      "sha256_cert_fingerprints": [
+        "E8:79:95:29:1C:18:72:A0:A2:52:ED:A2:C2:68:54:41:89:14:58:32:7B:8F:49:2F:E8:1E:15:4B:94:71:10:06"
+      ]
+    }
+  }
+]
