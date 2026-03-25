@@ -17,12 +17,24 @@
     <h1>CogniPlate</h1>
     <p>You requested a secure login or password reset.</p>
     
-    <a href="io.supabase.cogniplate://login-callback" class="button">Open CogniPlate App</a>
+    <a id="open-app-button" href="io.supabase.cogniplate://login-callback" class="button">Open CogniPlate App</a>
 
     <div class="instructions">
         <p><b>If you are on Android:</b> The app should have opened automatically. If not, click the button above.</p>
-        <p><b>If you are on iOS:</b> Since Universal Links are not yet configured, please click the button above to continue in the app.</p>
+        <p><b>If you are on iOS:</b> Please click the button above to continue in the app.</p>
         <p><b>If you are on PC:</b> Please open this link on your mobile device.</p>
     </div>
+
+    <script>
+        (function() {
+            var currentUrl = window.location.href;
+            if (currentUrl.includes('?')) {
+                var queryString = currentUrl.split('?')[1];
+                var button = document.getElementById('open-app-button');
+                var baseScheme = "io.supabase.cogniplate://login-callback";
+                button.href = baseScheme + "?" + queryString;
+            }
+        })();
+    </script>
 </body>
 </html>
