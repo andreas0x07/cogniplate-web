@@ -1,15 +1,28 @@
+// Flutter & Dart
+// Packages
+// Project
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CogniPlate Password Reset</title>
+    <title>CogniPlate Auth</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { font-family: sans-serif; text-align: center; padding: 50px; }
-        h1 { color: #4CAF50; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; text-align: center; padding: 50px 20px; line-height: 1.6; }
+        h1 { color: #2e7d32; }
+        .button { display: inline-block; background-color: #4CAF50; color: white; padding: 14px 28px; text-decoration: none; border-radius: 8px; font-weight: bold; margin-top: 20px; }
+        .instructions { color: #666; font-size: 0.9em; margin-top: 30px; }
     </style>
 </head>
 <body>
     <h1>CogniPlate</h1>
-    <p>You requested a password reset or login link.</p>
-    <p><b>Please open this email on your mobile phone to continue.</b></p>
+    <p>You requested a secure login or password reset.</p>
+    
+    <a href="io.supabase.cogniplate://login-callback" class="button">Open CogniPlate App</a>
+
+    <div class="instructions">
+        <p><b>If you are on Android:</b> The app should have opened automatically. If not, click the button above.</p>
+        <p><b>If you are on iOS:</b> Since Universal Links are not yet configured, please click the button above to continue in the app.</p>
+        <p><b>If you are on PC:</b> Please open this link on your mobile device.</p>
+    </div>
 </body>
 </html>
